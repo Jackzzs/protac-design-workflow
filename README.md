@@ -10,7 +10,7 @@ Features
 
 [Python 3]: https://pyup.io/repos/github/Jackzzs/protacarve/python-3-shield.svg
 [1]: https://pyup.io/repos/github/Jackzzs/protacarve/
-[Build Status]: https://img.shields.io/travis/Jackzzs/protacarve.svg
+[Build Status]: https://travis-ci.org/Jackzzs/protacarve.svg?branch=master
 [2]: https://travis-ci.org/Jackzzs/protacarve
 [GitHub last commit]: https://img.shields.io/github/last-commit/Jackzzs/protacarve
 [3]: https://github.com/Jackzzs/protacarve
