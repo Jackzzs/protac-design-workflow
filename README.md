@@ -1,16 +1,18 @@
 Protac Design Workflow
 ======================
 
-[![Build Status]][1] [![Codecov Coverage]][2] [![GitHub License]][3]
+[![Python 3]][1] [![Build Status]][2] [![GitHub last commit]][3] [![Updates]][4]
 
 Protac Design Workflow
 
 Features
 --------
 
-  [Build Status]: https://img.shields.io/travis/Jackzzs/protac-design-workflow.svg
-  [1]: https://travis-ci.org/Jackzzs/protac-design-workflow
-  [Codecov Coverage]: https://img.shields.io/codecov/c/github/Jackzzs/protac-design-workflow
-  [2]: https://codecov.io/gh/Jackzzs/protac-design-workflow
-  [GitHub License]: https://img.shields.io/github/license/Jackzzs/protac-design-workflow
-  [3]: https://github.com/Jackzzs/protac-design-workflow
+[Python 3]: https://pyup.io/repos/github/Jackzzs/protacarve/python-3-shield.svg
+[1]: https://pyup.io/repos/github/Jackzzs/protacarve/
+[Build Status]: https://img.shields.io/travis/Jackzzs/protacarve.svg
+[2]: https://travis-ci.org/Jackzzs/protacarve
+[GitHub last commit]: https://img.shields.io/github/last-commit/Jackzzs/protacarve
+[3]: https://github.com/Jackzzs/protacarve
+[Updates]: https://pyup.io/repos/github/Jackzzs/protacarve/shield.svg
+[4]: https://pyup.io/repos/github/Jackzzs/protacarve/
