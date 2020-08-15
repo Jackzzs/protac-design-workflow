@@ -1,44 +1,30 @@
-# Config file for automatic testing at travis-ci.com
-
 language: python
 python:
-  - 3.8
-  - 3.7
-  - 3.6
-  - 3.5
-
+- 3.8
+- 3.7
+- 3.6
+- 3.5
 before_install:
-  - if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
-    wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
-    else
-    wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
-    fi
-  - bash miniconda.sh -b -p $HOME/miniconda
-  - export PATH="$HOME/miniconda/bin:$PATH"
-  - hash -r
-  - conda config --set always_yes yes
-  - conda config --set remote_max_retries 3
-  - conda update -q conda
-  - conda config --set auto_update_conda no
-  - conda info -a
-
-# Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+- if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
+  -O miniconda.sh; else wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+  -O miniconda.sh; fi
+- bash miniconda.sh -b -p $HOME/miniconda
+- export PATH="$HOME/miniconda/bin:$PATH"
+- hash -r
+- conda config --set always_yes yes
+- conda config --set remote_max_retries 3
+- conda update -q conda
+- conda config --set auto_update_conda no
+- conda info -a
 install: pip install -U tox-travis
-
-# Command to run tests, e.g. python setup.py test
 script: tox
-
-# Assuming you have installed the travis-ci CLI tool, after you
-# create the Github repo and add it to Travis, run the
-# following command to finish PyPI deployment setup:
-# $ travis encrypt --add deploy.password
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
-  user: jackzzs
+  user: __token__
   password:
-    secure: PLEASE_REPLACE_ME
+      secure: knP/DKO5OUrwDVOzSbWpTRsnEwV70jGHgOdSoMNxZDJLqCtjjQAj7458jMCtI+DWC9K1BzQMObmmPFNeNhopW95VEE7+zL82KlFcWttU6zgVD0gq7u8AiiTP/oqg6Psnawr/pEGSjJBtJ9fg80nZhpqx1o5BWUjLLpX5ZShnqzeTBwnMhGJ3tlA0swqOBEgChzkgofBukCLCl7218ovcA6WshyUdDOyI1qISgxzPtfrHyTjyYvHV9FcbDtvNLGK8/do/GGX/aL0GCerYQrj036aknOOhH2RdFA8ARdD4smj+0z5fXTksd/7Voi5oimt1H1rAoQ4aSzkzAbuudWcabyxvrsjda5RUoog66E5QxRbYjNU8aHe1+wL7ClFDMk2a5/wdEXn7YGGGw4uLAIlVYvdkxEafZu3dV6cEyVk9CsLEyUpQjHJ3NKqJEc+KJqh84aNfsSYdvaQBcPSckANX9RbGnhJ94rErJc1UgdV9IJMGx6UZBCuo49+Fd6UvIh0w9UKtyHtyOhPgrUkk9bo85fCvwrrhXtkCqyMEG6SnOLhXmMER11/NIMIHHp3aM+iZiXJqQKS23G0RQVIAo4tlwQIToN6Cu1H40lGrsfmQ1MwfbjXBWer91tiMV1rAlq80fUVw/SO6GlFJa17C9qyGjp6B21QW+sW4dzVLwMQmQVc=
   on:
     tags: true
-    repo: Jackzzs/protacarve
+    repo: jackzzs/protacarve
     python: 3.8
